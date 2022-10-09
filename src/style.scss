@@ -1,0 +1,139 @@
+//TODO: Reset css
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// TODO: MIXIN
+@mixin size($width, $heigth) {
+  width: $width;
+  height: $heigth;
+}
+
+//TODO: Body Page
+body {
+  background-color: rgb(243, 234, 227);
+  font-family: Arial, Helvetica, sans-serif;
+  .section {
+    @include size(600px, 450px);
+    box-shadow: 0px 0px 10px 5px #bbb8b8;
+    margin: auto;
+    margin-top: calc((100vh - 450px) / 2);
+    border-radius: 10px;
+
+    &__img {
+      @include size(50%, 100%);
+      float: left;
+
+      img {
+        width: 100%;
+        border-radius: 10px 0px 0px 10px;
+      }
+    }
+
+    &__content {
+      @extend .section__img;
+      padding: 30px;
+      background-color: white;
+      border-radius: 0px 10px 10px 0px;
+
+      &__brand {
+        color: rgb(104, 104, 105);
+        font-size: 0.8em;
+        letter-spacing: 5px;
+      }
+
+      &__nameItem {
+        margin: 9% auto;
+        font-family: "Fraunces", serif;
+        font-size: 2em;
+        letter-spacing: 1px;
+      }
+
+      &__details {
+        color: rgb(104, 104, 105);
+        line-height: 1.4;
+      }
+
+      &__price {
+        margin: 9% auto;
+        font-family: "Fraunces", serif;
+        display: flex;
+
+        .price__sale {
+          font-size: 2em;
+          font-weight: bold;
+          color: rgb(61, 129, 104);
+        }
+
+        .price__real {
+          margin-left: 20px;
+          line-height: 40px;
+          color: rgb(104, 104, 105);
+        }
+      }
+
+      &__addCart {
+        @include size(100%, 40px);
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(61, 129, 104);
+        color: white;
+        font-weight: bold;
+
+        .icon {
+          margin-right: 2%;
+        }
+
+        &:hover {
+          background-color: rgb(48, 89, 74);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    .section {
+      @include size(90%, 650px);
+      margin: auto;
+      margin-top: calc((100vh - 650px) / 2);
+
+      &__img {
+        @include size(100%, 300px);
+
+        img {
+          @include size(100%, 300px);
+          border-radius: 10px 10px 0px 0px;
+          object-fit: cover;
+        }
+      }
+
+      &__content {
+        @include size(100%, 350px);
+        border-radius: 0px 0px 10px 10px;
+        // background-color: red;
+
+        &__nameItem {
+          margin: 4% auto;
+        }
+
+        &__price {
+          margin: 4% auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 416px) {
+  body {
+    .section {
+      &__content {
+        font-size: 14.5px;
+      }
+    }
+  }
+}

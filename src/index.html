@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview Card</title>
+    <link rel="icon" type="image" href="../Media/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+    </style>
+</head>
+
+<body>
+    <section class="section">
+        <picture class="section__img">
+            <source media="(max-width:450px)" srcset="../Media/image-product-mobile.jpg">
+            <source media="(max-width:650px)" srcset="../Media/image-product-mobile.jpg">
+            <img srcset="../Media/image-product-desktop.jpg" alt="Gabrielle">
+        </picture>
+
+        <div class="section__content">
+            <p class="section__content__brand">PERFUME</p>
+
+            <h1 class="section__content__nameItem">Gabrielle Essence Eau De Parfum</h1>
+
+            <p class="section__content__details">
+                A floreal, solar and voluptuous interpretation
+                composed by Olivier Polge, Perfumer-Creator
+                for the House of CHANEL.
+            </p>
+
+            <div class="section__content__price">
+                <p class="price__sale">$149.99</p>
+                <p class="price__real">
+                    <del>$169.99</del>
+                </p>
+            </div>
+
+            <button class="section__content__addCart">
+                <i class="icon fa-sharp fa-solid fa-cart-shopping"></i>
+                Add to Cart
+            </button>
+        </div>
+    </section>
+</body>
+
+</html>

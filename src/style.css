@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(243, 234, 227);
+  font-family: Arial, Helvetica, sans-serif;
+}
+body .section {
+  width: 600px;
+  height: 450px;
+  box-shadow: 0px 0px 10px 5px #bbb8b8;
+  margin: auto;
+  margin-top: calc((100vh - 450px) / 2);
+  border-radius: 10px;
+}
+body .section__img, body .section__content {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+body .section__img img, body .section__content img {
+  width: 100%;
+  border-radius: 10px 0px 0px 10px;
+}
+body .section__content {
+  padding: 30px;
+  background-color: white;
+  border-radius: 0px 10px 10px 0px;
+}
+body .section__content__brand {
+  color: rgb(104, 104, 105);
+  font-size: 0.8em;
+  letter-spacing: 5px;
+}
+body .section__content__nameItem {
+  margin: 9% auto;
+  font-family: "Fraunces", serif;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+body .section__content__details {
+  color: rgb(104, 104, 105);
+  line-height: 1.4;
+}
+body .section__content__price {
+  margin: 9% auto;
+  font-family: "Fraunces", serif;
+  display: flex;
+}
+body .section__content__price .price__sale {
+  font-size: 2em;
+  font-weight: bold;
+  color: rgb(61, 129, 104);
+}
+body .section__content__price .price__real {
+  margin-left: 20px;
+  line-height: 40px;
+  color: rgb(104, 104, 105);
+}
+body .section__content__addCart {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(61, 129, 104);
+  color: white;
+  font-weight: bold;
+}
+body .section__content__addCart .icon {
+  margin-right: 2%;
+}
+body .section__content__addCart:hover {
+  background-color: rgb(48, 89, 74);
+}
+
+@media screen and (max-width: 650px) {
+  body .section {
+    width: 90%;
+    height: 650px;
+    margin: auto;
+    margin-top: calc((100vh - 650px) / 2);
+  }
+  body .section__img, body .section__content {
+    width: 100%;
+    height: 300px;
+  }
+  body .section__img img, body .section__content img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
+  }
+  body .section__content {
+    width: 100%;
+    height: 350px;
+    border-radius: 0px 0px 10px 10px;
+  }
+  body .section__content__nameItem {
+    margin: 4% auto;
+  }
+  body .section__content__price {
+    margin: 4% auto;
+  }
+}
+@media screen and (max-width: 416px) {
+  body .section__content {
+    font-size: 14.5px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
